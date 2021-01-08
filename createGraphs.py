@@ -19,5 +19,6 @@ line_chart.add_data(data, titles_from_data=True)
 categories = Reference(ws, min_row=2, max_row=ws.max_row, min_col=1, max_col=1)
 line_chart.set_categories(categories)
 
+# worksheet에 chart를 작성하고, workbook을 저장해 준다.
 ws.add_chart(line_chart, "A"+ str(ws.max_row + 2))
 wb.save(fileName)
